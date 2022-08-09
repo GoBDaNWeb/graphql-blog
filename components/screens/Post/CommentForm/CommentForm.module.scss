@@ -1,0 +1,39 @@
+.commentForm {
+    background: white;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    input {
+        outline: none;
+        padding: .3rem;
+        border-radius: .5rem;
+        border: 1px solid black;
+        margin: .5rem;
+        width: 20rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .error {
+        color: red;
+    }
+    .btn {
+        button {
+            background: none;
+            border-radius: .5rem;
+            border: 1px solid black;
+            padding: .3rem;
+            width: 10rem;
+            cursor: pointer;
+            transition: 300ms ease;
+            font-size: 1rem;
+            &:hover {
+                background: black;
+                color: white;
+            }
+        }
+        .success {
+            color: green;
+        }
+    }
+}

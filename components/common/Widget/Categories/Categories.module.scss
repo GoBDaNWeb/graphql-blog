@@ -1,0 +1,16 @@
+.categories {
+    list-style-type: none;
+    padding: 0;
+    .category {
+        border-bottom: 1px solid black;
+        cursor: pointer;
+        padding: .5rem 0;
+        &:hover > a {
+            transition: 300ms ease;
+            padding-left: 2rem;
+        }
+        a {
+            transition: 300ms ease;
+        }
+    }
+}

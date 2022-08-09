@@ -1,0 +1,29 @@
+.authorCard {
+    background: rgba(0,0,0,.5);
+    padding: 1rem;
+    border-radius: .5rem;
+    color: white;
+    margin: 6rem 0;
+    position: relative;
+    min-height: 200px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    .avatar {
+        width: 8rem;
+        border-radius: 9999px;
+        position: absolute;
+        margin: 0 auto;
+        top: -4rem;
+        right: 0;
+        left: 0;
+    }
+    .content {
+        margin-top: 4rem;
+        text-align: center;
+        .name {
+            font-size: 2rem;
+        }
+        .bio {
+            font-size: 1.4rem;
+        }
+    }
+}
