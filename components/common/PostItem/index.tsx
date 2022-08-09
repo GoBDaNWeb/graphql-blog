@@ -1,18 +1,19 @@
 // * react/next
 import React from 'react'
 import {useRouter} from 'next/router'
-import {IPost} from 'models/models'
+import {IPostProps} from 'models/models'
 
 // * styles
 import styles from './PostItem.module.scss'
 import moment from 'moment';
 
-const PostItem: React.FC<IPost> = ({post}) => {
+const PostItem: React.FC<IPostProps> = ({post}) => {
+    console.log(post)
     const router = useRouter()
     return (
         <div className={styles.postItem}>
             <div 
-                onClick={() => router.push(`/post/${post.slug}`)}
+                onClick={() => router.push(`/post/${post.node.slug}`)}
                 className={styles.imageWrapper}
             >
                 <img 
@@ -27,7 +28,7 @@ const PostItem: React.FC<IPost> = ({post}) => {
                     <div className={styles.author}>
                         <img 
                             className={styles.avatar}
-                            src={post.node.author.photo.url}
+                            src={post.node.author.photo?.url}
                             alt="Avatar"
                         />
                         <h5>
@@ -39,7 +40,7 @@ const PostItem: React.FC<IPost> = ({post}) => {
                     </div>
                 </div>
                 <div className={styles.exerpt}>
-                    {post.exerpt}
+                    {post.node.exerpt}
                 </div>
             </div>
         </div>

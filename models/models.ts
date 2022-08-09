@@ -2,10 +2,6 @@ type url = {
     url: string
 }
 
-interface IPostNode {
-    node: IPost
-}
-
 interface IAuthor {
     bio: string,
     id: string,
@@ -24,6 +20,10 @@ interface IPost {
     title: string
 }
 
+interface IPostNode {
+    node: IPost
+}
+
 export interface ICategory {
     name: string,
     slug: string
@@ -36,7 +36,7 @@ export interface IComment {
 }
 
 export interface IPostProps {
-    post: IPost
+    post: IPostNode
 }
 
 export interface IPostsProps {
